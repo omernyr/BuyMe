@@ -7,7 +7,8 @@ We also learn how to bind our View with our ViewModel using the Closure(Data Bin
 Products Light Mode    |  Products Dark Mode
 :-------------------------:|:-------------------------:
 <img alt="Products List" src="Screenshots/product_light.png">|<img alt="Products list" src="Screenshots/product_dark.png">
-
+![light](https://user-images.githubusercontent.com/89137487/219813073-b8bd297e-377a-4d49-a771-1a7ec107521d.png)
+![dark](https://user-images.githubusercontent.com/89137487/219813126-006c8eb1-8ded-4367-b1f5-afb3239bcf9b.png)
 ## Characteristics
 
 - [x] UIKit
