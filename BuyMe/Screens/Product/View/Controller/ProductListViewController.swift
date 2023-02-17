@@ -8,24 +8,18 @@
 import UIKit
 
 class ProductListViewController: UIViewController {
-
-   // MARK: - Outlets
-   @IBOutlet weak var productTableView: UITableView!
-
-   // MARK: - Variables
-   private var viewModel = ProductViewModel()
-
-   override func viewDidLoad() {
-       super.viewDidLoad()
-       configuration()
-   }
-
-   @IBAction func addProductButtonTapped(_ sender: UIBarButtonItem) {
-       let product = AddProduct(title: "iPhone")
-       viewModel.addProduct(parameters: product)
-   }
+    
+    // MARK: - Outlets
+    @IBOutlet weak var productTableView: UITableView!
+    
+    // MARK: - Variables
+    private var viewModel = ProductViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configuration()
+    }
 }
-
 extension ProductListViewController {
 
    func configuration() {
@@ -58,15 +52,12 @@ extension ProductListViewController {
                }
            case .error(let error):
                print(error)
-           case .newProductAdded(let newProduct):
-               print(newProduct)
            }
        }
    }
-
 }
 
-extension ProductListViewController: UITableViewDataSource {
+extension ProductListViewController: UITableViewDataSource, UITableViewDelegate {
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        viewModel.products.count

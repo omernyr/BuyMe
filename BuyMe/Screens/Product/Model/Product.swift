@@ -9,9 +9,9 @@
 struct Product: Codable {
     var id: Int?
     var title: String?
-    var price: Double?
+    var price: Double
     var description: String?
-    var category: Category?
+    var category: Category
     var image: String?
     var rating: Rating?
 }
@@ -26,5 +26,5 @@ enum Category: String, Codable {
 // MARK: - Rating
 struct Rating: Codable {
     var rate: Double?
-    var count:  Int?
+    var count:  Int
 }
